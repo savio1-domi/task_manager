@@ -9,11 +9,11 @@ First, you need to fork this repo from
 Run
 
         npm install
-in the terminal to install the required dependencies.
+ the terminal to install the required dependencies.
 
 You will also need to clone another repository responsible for all the backend activities.
 
-        git clone git@github.com:Iank-code/phase-3-sinatra-react-project.git
+        git clone git@github.com:savio1-dome/phase-3-sinatra-react-project.git
 
         cd phase-3-sinatra-react-project
 
