@@ -3,52 +3,70 @@
   padding: 0;
   margin: 0;
 }
+
+body {
+  font-family: "Lora", serif;
+}
+
 .Navbar {
   margin: 2em 0 2em 2em;
 }
+
 .Navbar > * {
   margin: 0 5px;
   color: #000;
   text-decoration: none;
   font-family: "Lobster", cursive;
-  font-family: "Lora", serif;
-  font-family: "Shantell Sans", cursive;
   font-weight: 600;
 }
+
 .Navbar > *:hover {
   border-bottom: 1px solid black;
 }
+
 .form {
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
 }
+
 .form,
 .form > * {
   display: flex;
   flex-direction: column;
 }
+
 .form input {
   width: 300px;
-  padding: 1.5px 0;
+  padding: 10px;
   border-radius: 10px;
   outline: none;
 }
+
 button {
   border-radius: 6px;
   outline: none;
   width: 80px;
-  padding: 5px 3px;
-  margin-top: 6px;
+  padding: 10px;
+  margin-top: 10px;
   cursor: pointer;
   background-color: black;
   color: aliceblue;
+  transition: ease-in-out;
 }
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .selectedList {
   border: 1px solid #00ff0d;
-  padding: 5px 8px;
+  padding: 10px;
   border-radius: 6px;
 }
+
 .listSection {
   display: flex;
   flex-direction: column;
@@ -57,34 +75,41 @@ button {
   margin-top: 8px;
   transition: ease-in-out;
 }
+
 .listSection > * {
-  padding: 10px 0 0 0;
+  padding: 10px 0;
 }
+
 .list:hover {
   color: greenyellow;
 }
+
 .itemList {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
   align-items: center;
 }
+
 .itemList p:hover {
   color: rgb(121, 190, 18);
 }
+
 table {
   padding: 10px 0 20px 0;
 }
+
 td {
-  padding: 6px 15px 0 15px;
+  padding: 6px 15px;
 }
+
 .List {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   margin-left: -8rem;
 }
+
 .logOutBtn {
   position: absolute;
   top: 10px;
@@ -93,35 +118,43 @@ td {
   align-items: center;
   background: transparent;
   color: #000;
+  transition: ease-in-out;
 }
+
 .logOutBtn:hover {
   color: #b91d1d;
   border-color: #b91d1d;
   font-size: 14px;
 }
-.newTask{
+
+.newTask {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.newTask button{
+
+.newTask button {
   background-color: transparent;
   color: #000;
   transition: ease-in-out;
 }
-.newTask button:hover{
+
+.newTask button:hover {
   background-color: black;
   color: white;
 }
-.newTask input{
+
+.newTask input {
   border-radius: 5px;
   line-height: 20px;
 }
-input{
+
+input {
   outline: none;
   align-items: center;
   text-align: center;
 }
-img{
+
+img {
   width: 500px;
 }
