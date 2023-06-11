@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Box, Text, Checkbox } from "@chakra-ui/react";
+import { Box, Text, Checkbox, Button } from "@chakra-ui/react";
 import SelectedTask from "./SelectedTask";
 import UpdateTask from "./UpdateTask";
 
 function List({ data, deleteItem, id, checkDone }) {
+
   const [updater, setUpdater] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
-
   const handleClick = () => {
     setIsSelected(!isSelected);
   };
@@ -16,36 +16,28 @@ function List({ data, deleteItem, id, checkDone }) {
   };
 
   return (
-    <Box className="List" display="flex" flexDirection="row" gap="8px">
-      <Text onClick={handleClick}>{data.name}</Text>
+    <Box className="List">
+      <Text className="List-text" onClick={handleClick} fontSize="*5">
+        {data.name}
+      </Text>
+      {updater && <UpdateTask id={id} />}
+      {isSelected && <SelectedTask item={data} />}
       <Checkbox onChange={checkDone} />
-      <svg
+      <Button
+        className="List-button"
         onClick={updatePost}
-        style={{
-          margin: "0 10px",
-        }}
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        className="bi bi-pencil-square"
-        viewBox="0 0 16 16"
+        colorScheme="blue" 
       >
-        {/* Pencil SVG path */}
-      </svg>
-      <svg
+        Edit
+      </Button>
+      <Button
+        className="List-button"
         onClick={deleteItem}
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        fill="red"
-        className="bi bi-trash3-fill"
-        viewBox="0 0 16 16"
+        colorScheme="red"
       >
-        {/* Trash SVG path */}
-      </svg>
-      {updater ? <UpdateTask id={id} /> : ""}
-      <div>{isSelected ? <SelectedTask item={data} /> : ""}</div>
+        Delete
+      </Button>
+
     </Box>
   );
 }
