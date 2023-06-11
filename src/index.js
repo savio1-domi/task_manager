@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client"; // Update the import statement
 import { ChakraProvider, CSSReset, IconButton, useColorMode } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
@@ -22,13 +22,14 @@ function ThemeToggle() {
   );
 }
 
-ReactDOM.render(
+// Wrap your rendering logic with createRoot
+createRoot(document.getElementById("root")).render( // Use createRoot from "react-dom"
   <React.StrictMode>
     <ChakraProvider>
       <CSSReset />
       <BrowserRouter>
         <Nav />
-        <ThemeToggle /> {/* Add the ThemeToggle component */}
+        <ThemeToggle />
         <Routes>
           <Route path="/" element={<Register />} />
           <Route path="/login" element={<Login />} />
@@ -36,6 +37,5 @@ ReactDOM.render(
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
