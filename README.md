@@ -1,42 +1,71 @@
 # Task Manager
-This project was created by Dominic Juma.
+Task Manager is a web application designed to help you manage your tasks efficiently. It provides a user-friendly interface for creating, updating, and tracking tasks. This project was created by Dominic Juma.
 
-## How to use
-To use or view this webapp.
-First, you need to fork this repo from
+# Table of Contents
+* [Installation and Setup](#installation-and-setup)
+* [Usage](#usage)
+* [Authentication](#authentication)
+* [Contributor](#contributor)
+* [License](#license)
 
-    https://github.com/savio1-domi/task-manager
-Run
+
+# Getting started
+## Installation and Setup
+To use or contribute to this project, follow the steps below:
+
+1. Fork this repository from https://github.com/savio1-domi/task-manager to your GitHub account.
+
+2. Clone the forked repository to your local machine using the following command:
+
+        git clone git@github.com:savio1-domi/task-manager.git
+
+3. Install the required dependencies by running the following command in your terminal:
 
         npm install
- the terminal to install the required dependencies.
 
-You will also need to clone another repository responsible for all the backend activities.
+4. Clone the backend repository responsible for all the backend activities by running the following command:
 
-        git clone git@github.com:savio1-dome/phase-3-sinatra-react-project.git
+       git clone git@github.com:savio1-domi/phase-3-sinatra-react-project.git
 
-        cd phase-3-sinatra-react-project
+5. Navigate to the backend repository:
 
-        bundle install
+       cd phase-3-sinatra-react-project
 
-        bundle exec rake server
+6. Install the backend dependencies by running the following command:
 
-### `npm start`
+       bundle install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+7. Start the backend server by running the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+       bundle exec rake server
+
+
+### `Usage`
+
+1. Start the frontend development server by running the following command in the terminal:
+
+
+         npm start
+
+    This will start the app in the development mode. Open http://localhost:3000 in your browser to view the Task Manager.
+
+    The page will automatically reload if you make any changes to the source code. You will also see any lint errors in the console.
+
+2. Upon accessing the Task Manager, you will be prompted to create an account. This account will be used for authentication whenever you want to use the app.
+
+3. Once logged in, you can start managing your tasks by creating new tasks, updating existing tasks, and marking tasks as completed.
+
+
 
 ## Authentication
 You will be prompted to create an account which you'll be using whenever you want to use the app.
 
 
 ## Contributor
-The project is contributed by Ian Kamau [ https://github.com/savio1-domi ]
+The project is contributed by Senior Developer Dominic Juma[ https://github.com/savio1-domi ]
 
 ## License
-This project is licensed under the MIT license.
+This project is licensed under the MIT license. See the [ https://chat.openai.com/c/LICENSE ] file for more details.
+
 
 
