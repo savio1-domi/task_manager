@@ -1,4 +1,4 @@
-import { Box, Heading, Button, Checkbox } from "@chakra-ui/react";
+import { Box, Heading, Button, Checkbox, Text } from "@chakra-ui/react";
 import FetchHook from "./hooks/Fetch.js";
 import NewTask from "./NewTask.js";
 import React, { useState } from "react";
@@ -23,7 +23,7 @@ function Home() {
   }
 
   const deletePost = (id) => {
-    fetch(`https://localhost:9292/delete/${id}`, {
+    fetch(`https://sinatra-web-app.onrender.com/delete/${id}`, {
       method: "DELETE",
     }).then((res) => res.json());
     setData(data.filter((item) => item.id !== id));
@@ -48,13 +48,13 @@ function Home() {
   return (
     <Box className="listSection" marginBottom="3rem" display="flex" flexDirection="column">
       <Heading as="h2" size="lg">Welcome to Task Manager</Heading>
-      <Heading as="h4" size="md">This is a platform where you can write tasks you plan to do</Heading>
+      <Text fontSize="lg">This is a platform where you can write tasks you plan to do</Text>
       <img src={require("../assets/task-img.png")} alt="task_img" />
       <Button className="logOutBtn" style={{ float: "left" }} onClick={() => navigate("/")}>
         Log Out
       </Button>
 
-      <p style={{ marginLeft: "-9rem" }}>Click here to add task 👇</p>
+      <Text style={{ marginLeft: "-9rem" }}>Click here to add task 👇</Text>
       <Button
         backgroundColor="transparent"
         color="black"
