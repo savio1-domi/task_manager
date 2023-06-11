@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Box, Spinner, Alert, AlertIcon } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 
-function Fetch({ url }) {
+function Fetch(url) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -19,6 +18,7 @@ function Fetch({ url }) {
       })
       .then((data) => {
         setData(data.data);
+        console.log(data.data);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -28,31 +28,7 @@ function Fetch({ url }) {
       });
   }, [url]);
 
-  if (isLoading) {
-    return (
-      <Box textAlign="center" p={4}>
-        <Spinner size="lg" />
-      </Box>
-    );
-  }
-
-  if (error) {
-    return (
-      <Box textAlign="center" p={4}>
-        <Alert status="error">
-          <AlertIcon />
-          Error occurred while fetching data.
-        </Alert>
-      </Box>
-    );
-  }
-
-  return (
-    <div>
-      {/* Render your data here */}
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-    </div>
-  );
+  return { data, isLoading, error, setData };
 }
 
 export default Fetch;
