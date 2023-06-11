@@ -13,17 +13,19 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    data.map((item) => {
-      if (email === item.email && password === item.password) {
-        alert("Success!");
-        setLoginEmail("");
-        setLoginPassword("");
-
-        navigate("/home");
-      }
-      return null;
-    });
+    if (data) {
+      data.map((item) => {
+        if (email === item.email && password === item.password) {
+          alert("Success!");
+          setLoginEmail("");
+          setLoginPassword("");
+          navigate("/home");
+        }
+        return null;
+      });
+    }
   };
+  
 
   const gotoSignUpPage = () => navigate("/");
 
